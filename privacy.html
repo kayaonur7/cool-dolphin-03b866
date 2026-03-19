@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style id="nrt-critical">
+    /* Critical: hide dynamic elements before JS runs */
+    .nav-drawer { display: none !important; }
+    .skip-link { 
+      position: fixed !important; 
+      top: -300px !important; 
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .nav-menu-btn { display: none !important; }
+    .scroll-top { opacity: 0 !important; pointer-events: none !important; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | Northern Rock Technology Consulting</title>
+  <meta name="description" content="Privacy policy for Northern Rock Technology Consulting LLC." />
+  <link rel="canonical" href="https://northernrocktech.com/privacy.html" />
+  <meta property="og:image" content="https://northernrocktech.com/og-image.png" />
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b1220" />
+
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Northern Rock Technology Consulting LLC</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/services.html" data-i18n="nav_services">Services</a>
+        <a href="/services.html#how" data-i18n="nav_how">How we work</a>
+        <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-head">
+      <h1 data-i18n="privacy_title">Privacy Policy</h1>
+      <p class="muted">Last updated: <span id="d"></span></p>
+    </section>
+
+    <section class="section">
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;" data-i18n="privacy_h_overview">Overview</h3>
+        <p class="muted" data-i18n="privacy_overview">This website is operated by Northern Rock Technology Consulting LLC. We collect limited information to operate the site, respond to inquiries, and understand site performance.</p>
+
+        <h3 data-i18n="privacy_h_provided">Information you provide</h3>
+        <p class="muted" data-i18n="privacy_provided">If you submit the contact form, we receive the information you enter (such as name, email, company, and message) so we can respond to your request.</p>
+
+        <h3 data-i18n="privacy_h_analytics">Analytics</h3>
+        <p class="muted" data-i18n="privacy_analytics">We use Google Analytics to understand aggregated usage of the website (for example, page views and interactions). Analytics may set cookies or use similar technologies. You can limit cookies in your browser settings.</p>
+
+        <h3 data-i18n="privacy_h_use">How we use information</h3>
+        <ul class="list">
+          <li data-i18n="privacy_use_l1">Respond to consultation requests and inquiries</li>
+          <li data-i18n="privacy_use_l2">Maintain security and reliability of the website</li>
+          <li data-i18n="privacy_use_l3">Improve content and user experience based on aggregated analytics</li>
+        </ul>
+
+        <h3 data-i18n="privacy_h_sharing">Sharing</h3>
+        <p class="muted" data-i18n="privacy_sharing">We do not sell personal information. We may share data with service providers that help operate the site (for example, hosting, form processing, and analytics), only as needed to provide the service.</p>
+
+        <h3 data-i18n="privacy_h_contact">Contact</h3>
+        <p class="muted"><span data-i18n="privacy_contact">For privacy questions, email info@northernrocktech.com.</span></p>
+
+        <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin: 24px 0;" />
+
+        <h3 data-i18n="privacy_h_faturaai">FaturaAI Mobile Application</h3>
+        <p class="muted" data-i18n="privacy_faturaai_1">The FaturaAI iOS app does not collect, store, or share any personal data. All invoice data is stored locally on your device only. Camera and file access is used solely for invoice analysis purposes. Invoice images are processed via Anthropic's Claude API for analysis only and are not retained on any server. No usage statistics, location data, or identifiers are collected.</p>
+        <p class="muted" data-i18n="privacy_faturaai_2">For FaturaAI privacy questions, email info@northernrocktech.com.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Northern Rock Technology Consulting LLC • northernrocktech.com</div>
+      <div class="muted">
+        <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a> •
+        <a href="/terms.html" data-i18n="footer_terms">Terms</a> •
+        <span data-i18n="footer_email_label">Email:</span> <a href="mailto:info@northernrocktech.com">info@northernrocktech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    var dt = new Date();
+    document.getElementById("d").textContent = dt.toLocaleDateString(undefined, {year:'numeric',month:'long',day:'numeric'});
+  </script>
+  <script src="/i18n.js"></script>
+
+  <div id="cookieBanner" class="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong data-i18n="cookie_title">Cookies</strong>
+        <span class="muted" data-i18n="cookie_text">We use cookies to understand site usage and improve our services.</span>
+        <a class="cookie-link" href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
+      </div>
+      <button id="cookieAccept" class="btn primary" type="button" data-i18n="cookie_ok">OK</button>
+    </div>
+  </div>
+  <script>
+    (function(){try{var key="nrt_cookie_ok";var banner=document.getElementById("cookieBanner");var btn=document.getElementById("cookieAccept");if(!banner||!btn)return;if(!localStorage.getItem(key)){banner.hidden=false;banner.classList.add("show");}btn.addEventListener("click",function(){localStorage.setItem(key,"1");banner.classList.remove("show");banner.hidden=true;});}catch(e){}})();
+  </script>
+</body>
+</html>

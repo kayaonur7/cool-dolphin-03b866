@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style id="nrt-critical">
+    /* Critical: hide dynamic elements before JS runs */
+    .nav-drawer { display: none !important; }
+    .skip-link { 
+      position: fixed !important; 
+      top: -300px !important; 
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .nav-menu-btn { display: none !important; }
+    .scroll-top { opacity: 0 !important; pointer-events: none !important; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Northern Rock Technology Consulting</title>
+  <meta name="description" content="Contact Northern Rock Technology Consulting. Send a consultation request via our secure form or email." />
+  <link rel="canonical" href="https://northernrocktech.com/contact.html" />
+  <meta property="og:title" content="Contact | Northern Rock Technology Consulting" />
+  <meta property="og:description" content="Send a consultation request via our secure form." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://northernrocktech.com/contact.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZZRLGK355"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZZRLGK355');</script>
+  <meta property="og:image" content="https://northernrocktech.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://northernrocktech.com/og-image.png" />
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b1220" />
+
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Northern Rock Technology Consulting LLC</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/services.html" data-i18n="nav_services">Services</a>
+        <a href="/services.html#how" data-i18n="nav_how">How we work</a>
+        <a class="active" href="/contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-head">
+      <h1 data-i18n="contact_title">Contact</h1>
+      <p class="muted" data-i18n="contact_lead">Send a consultation request. You'll get an instant success message.</p>
+    </section>
+
+    <section class="section">
+      <div class="grid contact-grid">
+        <article class="card" style="padding:18px;">
+          <h3 style="margin-top:0;" data-i18n="contact_biz_h3">Business email</h3>
+          <p class="muted">
+            <a href="mailto:info@northernrocktech.com" id="emailLink">info@northernrocktech.com</a><br/>
+            <span data-i18n="contact_biz_note">Austin, TX • Remote-first</span>
+          </p>
+          <p class="tiny muted" data-i18n="contact_biz_tip">For faster routing, include: company name, project summary, and timeline.</p>
+        </article>
+
+        <article class="card" style="padding:18px;">
+          <h3 style="margin-top:0;" data-i18n="contact_form_h3">Request a consultation</h3>
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <label for="name" data-i18n="contact_lbl_name">Name</label>
+            <input id="name" name="name" required />
+            <label for="email" data-i18n="contact_lbl_email">Email</label>
+            <input id="email" name="email" type="email" required />
+            <label for="company" data-i18n="contact_lbl_company">Company (optional)</label>
+            <input id="company" name="company" />
+            <label for="message" data-i18n="contact_lbl_msg">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="form-actions">
+              <button class="btn primary" type="submit" data-i18n="contact_submit">Send</button>
+              <span class="tiny muted" data-i18n="contact_secure">Secure handling • NDA-friendly</span>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="successModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-icon" aria-hidden="true">✅</div>
+      <h2 data-i18n="contact_modal_h2">Message received</h2>
+      <p class="muted">
+        <span data-i18n="contact_modal_p">Thanks — we'll get back to you soon.</span>
+        <br/><span class="tiny muted" data-i18n="contact_modal_sub">We typically reply within 1 business day.</span>
+      </p>
+      <div class="modal-actions">
+        <a class="btn" href="/" data-i18n="contact_modal_back">Back to home</a>
+        <button id="closeModal" class="btn primary" type="button" data-i18n="contact_modal_close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Northern Rock Technology Consulting LLC • northernrocktech.com</div>
+      <div class="muted">
+        <span data-i18n="footer_email_label">Email:</span> <a href="mailto:info@northernrocktech.com">info@northernrocktech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="/i18n.js"></script>
+  <script>
+    var toast = document.getElementById("toast");
+    var modal = document.getElementById("successModal");
+    var closeModalBtn = document.getElementById("closeModal");
+
+    function showToast(msg, isError) {
+      toast.textContent = msg;
+      toast.classList.toggle("error", !!isError);
+      toast.classList.add("show");
+      window.clearTimeout(window.__toastTimer);
+      window.__toastTimer = window.setTimeout(function(){ toast.classList.remove("show"); }, 3200);
+    }
+    function openModal() {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      if (!window.__gaLeadSent) {
+        window.__gaLeadSent = true;
+        if (window.gtag) { gtag('event','form_submit',{event_category:'lead',event_label:'contact_form'}); }
+      }
+    }
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+    closeModalBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", function(e){ if(e.target===modal) closeModal(); });
+
+    var form = document.getElementById("contactForm");
+    var submitBtn = form.querySelector('button[type="submit"]');
+    form.addEventListener("submit", async function(e){
+      e.preventDefault();
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      var formData = new FormData(form);
+      var body = new URLSearchParams(formData).toString();
+      try {
+        var res = await fetch("/", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:body });
+        if (!res.ok) throw new Error("fail");
+        showToast(window.nrtI18n ? window.nrtI18n.t('contact_toast_ok') : "Sent successfully.");
+        form.reset();
+        openModal();
+      } catch(err) {
+        showToast(window.nrtI18n ? window.nrtI18n.t('contact_toast_err') : "Could not send. Please email info@northernrocktech.com", true);
+      } finally {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+
+  <div id="cookieBanner" class="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong data-i18n="cookie_title">Cookies</strong>
+        <span class="muted" data-i18n="cookie_text">We use cookies to understand site usage and improve our services.</span>
+        <a class="cookie-link" href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
+      </div>
+      <button id="cookieAccept" class="btn primary" type="button" data-i18n="cookie_ok">OK</button>
+    </div>
+  </div>
+  <script>
+    (function(){try{var key="nrt_cookie_ok";var banner=document.getElementById("cookieBanner");var btn=document.getElementById("cookieAccept");if(!banner||!btn)return;if(!localStorage.getItem(key)){banner.hidden=false;banner.classList.add("show");}btn.addEventListener("click",function(){localStorage.setItem(key,"1");banner.classList.remove("show");banner.hidden=true;});}catch(e){}})();
+  </script>
+</body>
+</html>

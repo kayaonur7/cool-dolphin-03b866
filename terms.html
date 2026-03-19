@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style id="nrt-critical">
+    /* Critical: hide dynamic elements before JS runs */
+    .nav-drawer { display: none !important; }
+    .skip-link { 
+      position: fixed !important; 
+      top: -300px !important; 
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .nav-menu-btn { display: none !important; }
+    .scroll-top { opacity: 0 !important; pointer-events: none !important; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use | Northern Rock Technology Consulting</title>
+  <meta name="description" content="Terms of use for Northern Rock Technology Consulting LLC." />
+  <link rel="canonical" href="https://northernrocktech.com/terms.html" />
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b1220" />
+
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Northern Rock Technology Consulting LLC</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/services.html" data-i18n="nav_services">Services</a>
+        <a href="/services.html#how" data-i18n="nav_how">How we work</a>
+        <a href="/contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-head">
+      <h1 data-i18n="terms_title">Terms of Use</h1>
+      <p class="muted">Last updated: <span id="d"></span></p>
+    </section>
+
+    <section class="section">
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;" data-i18n="terms_h_use">Use of this website</h3>
+        <p class="muted" data-i18n="terms_use">By accessing this website, you agree to use it for lawful purposes only and not to disrupt or attempt to gain unauthorized access to the site or its systems.</p>
+
+        <h3 data-i18n="terms_h_advice">No professional advice</h3>
+        <p class="muted" data-i18n="terms_advice">Information on this site is provided for general informational purposes and does not constitute legal, financial, or professional advice. For advice tailored to your situation, request a consultation.</p>
+
+        <h3 data-i18n="terms_h_ip">Intellectual property</h3>
+        <p class="muted" data-i18n="terms_ip">Unless otherwise stated, the content on this website is owned by Northern Rock Technology Consulting LLC. You may not reproduce or distribute content without permission.</p>
+
+        <h3 data-i18n="terms_h_liability">Limitation of liability</h3>
+        <p class="muted" data-i18n="terms_liability">The website is provided "as is" without warranties of any kind. We are not liable for damages arising from your use of the website to the maximum extent permitted by law.</p>
+
+        <h3 data-i18n="terms_h_contact">Contact</h3>
+        <p class="muted" data-i18n="terms_contact">Questions about these terms: info@northernrocktech.com.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Northern Rock Technology Consulting LLC • northernrocktech.com</div>
+      <div class="muted">
+        <a href="/privacy.html" data-i18n="footer_privacy">Privacy</a> •
+        <a href="/terms.html" data-i18n="footer_terms">Terms</a> •
+        <span data-i18n="footer_email_label">Email:</span> <a href="mailto:info@northernrocktech.com">info@northernrocktech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    var dt = new Date();
+    document.getElementById("d").textContent = dt.toLocaleDateString(undefined, {year:'numeric',month:'long',day:'numeric'});
+  </script>
+  <script src="/i18n.js"></script>
+
+  <div id="cookieBanner" class="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong data-i18n="cookie_title">Cookies</strong>
+        <span class="muted" data-i18n="cookie_text">We use cookies to understand site usage and improve our services.</span>
+        <a class="cookie-link" href="/privacy.html" data-i18n="footer_privacy">Privacy</a>
+      </div>
+      <button id="cookieAccept" class="btn primary" type="button" data-i18n="cookie_ok">OK</button>
+    </div>
+  </div>
+  <script>
+    (function(){try{var key="nrt_cookie_ok";var banner=document.getElementById("cookieBanner");var btn=document.getElementById("cookieAccept");if(!banner||!btn)return;if(!localStorage.getItem(key)){banner.hidden=false;banner.classList.add("show");}btn.addEventListener("click",function(){localStorage.setItem(key,"1");banner.classList.remove("show");banner.hidden=true;});}catch(e){}})();
+  </script>
+</body>
+</html>
